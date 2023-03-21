@@ -70,3 +70,7 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "inline_svg", "~> 1.8"
+
+gem "standard", "~> 1.25", :groups => [:development, :test]
