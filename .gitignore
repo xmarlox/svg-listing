@@ -63,4 +63,4 @@ build-iPhoneSimulator/
 
 /node_modules
 /storage
-/db
+/db/*.sqlite*
