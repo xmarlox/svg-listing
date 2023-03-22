@@ -20,6 +20,7 @@ Bundler.require(*Rails.groups)
 
 module SvgListing
   class Application < Rails::Application
+    config.autoloader = :zeitwerk
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
