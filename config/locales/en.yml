@@ -31,3 +31,10 @@
 
 en:
   hello: "Hello world"
+  errors:
+    messages:
+      size_less_than_or_equal_to: size %{file_size} is not less than or equal to %{max_size}
+  activerecord:
+    attributes:
+      illustration:
+        svg: SVG file

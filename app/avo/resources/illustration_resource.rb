@@ -1,4 +1,7 @@
 class IllustrationResource < Avo::BaseResource
+  # self.default_view_type = :grid
+  self.after_create_path = :index
+
   self.title = :slug
   self.includes = []
   # self.search_query = -> do
@@ -9,7 +12,7 @@ class IllustrationResource < Avo::BaseResource
   end
 
   field :id, as: :id
-  field :name, as: :text
-  field :svg, as: :file, accept: "image/svg+xml"
-  field :tags, as: :tags, acts_as_taggable_on: :tags
+  field :name, as: :text, required: true
+  field :svg, as: :file, required: true, accept: "image/svg+xml"
+  field :tags, as: :tags, required: true, acts_as_taggable_on: :tags
 end

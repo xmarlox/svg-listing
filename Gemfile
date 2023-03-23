@@ -81,3 +81,5 @@ gem "friendly_id", "~> 5.5"
 gem "acts-as-taggable-on", "~> 9.0"
 
 gem "avo", "~> 2.28"
+
+gem "active_storage_validations", "~> 1.0"
