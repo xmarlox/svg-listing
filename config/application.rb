@@ -31,5 +31,7 @@ module SvgListing
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    config.x.app = config_for(:app).with_indifferent_access
   end
 end

@@ -13,6 +13,6 @@ class IllustrationResource < Avo::BaseResource
 
   field :id, as: :id
   field :name, as: :text, required: true
-  field :svg, as: :file, required: true, accept: "image/svg+xml"
+  field :svg, as: :inline_svg, required: true, accept: "image/svg+xml"
   field :tags, as: :tags, required: true, acts_as_taggable_on: :tags
 end

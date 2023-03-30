@@ -297,7 +297,6 @@ DEPENDENCIES
   debug
   friendly_id (~> 5.5)
   image_processing
-  inline_svg (~> 1.8)
   jbuilder
   jsbundling-rails
   puma (~> 5.0)

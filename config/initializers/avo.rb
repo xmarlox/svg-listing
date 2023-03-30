@@ -1,7 +1,7 @@
 # For more information regarding these settings check out our docs https://docs.avohq.io
 Avo.configure do |config|
   ## == Routing ==
-  config.root_path = "/backend"
+  config.root_path = "/#{Rails.configuration.x.app[:backend_pathname]}"
 
   # Where should the user be redirected when visiting the `/avo` url
   # config.home_path = nil

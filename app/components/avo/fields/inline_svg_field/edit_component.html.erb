@@ -1,0 +1,52 @@
+<%= field_wrapper **field_wrapper_args do %>
+  <% if @field.value.present? %>
+    <% file = @field.value.attachment %>
+    <div class="flex flex-col justify-between h-full">
+      <%= render_svg(@field, class: "w-16 h-16") %>
+      <span class="text-gray-500 mt-2 text-sm truncate" title="<%= file.filename %>"><%= file.filename %></span>
+    </div>
+    <div class="flex space-x-2 mb-2">
+      <div class="flex">
+        <% if can_download_file? %>
+          <%= a_link Rails.application.routes.url_helpers.rails_blob_path(file, only_path: true, disposition: :attachment),
+            icon: 'heroicons/outline/download',
+            color: :primary,
+            download: true,
+            class: 'text-center',
+            title: t('avo.download_file'),
+            data: { tippy: :tooltip },
+            compact: true,
+            size: :xs %>
+        <% end %>
+      </div>
+      <div>
+        <% if can_delete_file? %>
+          <%= a_link Avo::Services::URIService.parse(@resource.record_path).append_paths("active_storage_attachments", @field.id, file.id).to_s,
+            icon: 'heroicons/outline/trash',
+            color: :red,
+            compact: true,
+            size: :xs,
+            class: 'text-center',
+            title: t('avo.delete_file', item: file.filename),
+            data: {
+              turbo_method: :delete,
+              turbo_confirm: t('avo.are_you_sure'),
+              tippy: :tooltip
+            } %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+  <% if can_upload_file? %>
+    <%= @form.file_field @field.id,
+      accept: @field.accept,
+      data: @field.get_html(:data, view: view, element: :input),
+      direct_upload: @field.direct_upload,
+      disabled: disabled?,
+      style: @field.get_html(:style, view: view, element: :input),
+      class: "w-full"
+    %>
+  <% else %>
+    —
+  <% end %>
+<% end %>

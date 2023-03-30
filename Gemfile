@@ -74,8 +74,6 @@ group :test do
   gem "webdrivers"
 end
 
-gem "inline_svg", "~> 1.8"
-
 gem "friendly_id", "~> 5.5"
 
 gem "acts-as-taggable-on", "~> 9.0"

@@ -1,0 +1,13 @@
+default: &default
+  default_host: http://localhost:3000
+  backend_pathname: backend
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default
+  default_host: https://svglisting.net
