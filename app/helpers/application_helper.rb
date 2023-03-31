@@ -7,8 +7,9 @@ module ApplicationHelper
     content =
       if file.is_a?(Tempfile)
         file.read
-      elsif File.exist?(file)
-        File.read(file)
+      elsif file.is_a?(String) && file.end_with?(".svg")
+        file = Rails.root.join("app", "assets", "images", file).to_s
+        File.read(file) if File.exist?(file)
       else
         file
       end
