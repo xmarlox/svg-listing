@@ -11,7 +11,7 @@ class IllustrationResource < Avo::BaseResource
     model_class.friendly
   end
 
-  field :id, as: :id
+  field :slug, as: :id
   field :name, as: :text, required: true
   field :svg, as: :inline_svg, required: true, accept: "image/svg+xml"
   field :tags, as: :tags, required: true, acts_as_taggable_on: :tags
