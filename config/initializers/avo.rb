@@ -51,7 +51,7 @@ Avo.configure do |config|
   # config.cache_resource_filters = ->(current_user:, resource:) { current_user.cache_resource_filters?}
 
   ## == Customization ==
-  config.app_name = "SVG Listing"
+  config.app_name = "/illustrations"
   # config.timezone = "UTC"
   # config.currency = "USD"
   # config.hide_layout_when_printing = false
