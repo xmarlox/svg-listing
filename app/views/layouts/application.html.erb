@@ -26,7 +26,11 @@
     <div class="2xl:max-w-7xl mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-4">
         <%= render "layouts/shared/sidebar" %>
-        <%= yield %>
+        <main role="main" class="w-full lg:col-span-3">
+          <section>
+            <%= yield %>
+          </section>
+        </main>
       </div>
     </div>
   </body>

@@ -90,6 +90,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        white: "#fdfdfd",
         black: "#1b1d20",
         "accent": {
           "50": "#E5E5FF",

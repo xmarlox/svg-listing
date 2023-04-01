@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "illustrations#index"
 
-  resources :illustrations, only: %i(index)
+  resources :illustrations, only: %i(index) do
+    get :search, on: :collection
+  end
 end

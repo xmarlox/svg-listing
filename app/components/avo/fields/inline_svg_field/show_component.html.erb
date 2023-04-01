@@ -1,7 +1,7 @@
 <%= field_wrapper **field_wrapper_args do %>
   <div class="flex flex-col justify-between h-full">
     <% file = @field.value.attachment %>
-    <%= render_svg(@field, class: "w-16 h-16") %>
+    <%= render_svg(@field, class: "w-6 h-6") %>
     <span class="text-gray-500 mt-2 text-sm truncate" title="<%= file.filename %>"><%= file.filename %></span>
   </div>
 <% end %>
