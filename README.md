@@ -1,9 +1,11 @@
 ## /illustrations
 
 ### Features
-1. Search by name or tags
-2. Change color fill (v2)
-3. Modal view and download (v2)
+1. SVG listing
+2. Search by name or tags
+3. SVG CRUD
+4. Change color fill (v2)
+5. Modal view and download (v2)
 
 ### Installation
 1. Clone this github repository via terminal
